@@ -11,15 +11,15 @@ host = "http://<your-home-assistant-ip>:8123"
 update_interval = "15s"
 # The location, where all registration information for Home Assistant will be stored on your machine.
 # You do not need to change this.
-registration_file = "~/.config/hacompanion-registration.json"
+registration_file = "~/.config/hacompanion/registration.json"
 
 [notifications]
 # Where Home Assistant should send notifications to. Make sure to insert your
 # local IP address here. Make sure the port is the same as in the `listen` setting below.
-push_url = "http://<your-local-ip>:8080/notifications"
+push_url = "http://<your-local-ip>:8234/notifications"
 # The IP and Port where the Notification server on your machine will listen.
-# By default listens on port 8080 on all interfaces.
-listen = ":8080"
+# By default listens on port 8234 on all interfaces.
+listen = ":8234"
 
 ##
 ## Below are all available senors. Enable/Disable them as needed.
@@ -65,16 +65,16 @@ meta = { battery = "BAT0" }
 # Report if the companion process is running on this machine.
 [sensor.companion_running]
 enabled = true
-name = "Companion Is Running"
+name = "Companion Running"
 
 # Report if this machine has connection to a remote host.
 # You can configure which host to ping in the meta section.
 [sensor.online_check]
 enabled = true
-name = "Is Online"
+name = "Connectivity"
 # Available modes are "http" and "ping".
 # meta = { target = "192.168.1.1", mode = "ping" }
-meta = { target = "https://google.com", mode = "http" }
+meta = { target = "http://neverssl.com", mode = "http" }
 
 # Report the average system load in the last 1m, 5m and 15m.
 [sensor.load_avg]

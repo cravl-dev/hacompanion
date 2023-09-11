@@ -1,4 +1,6 @@
 .idea
+.vscode
+*.code-workspace
 
 # Binaries for programs and plugins
 *.exe
@@ -16,4 +18,8 @@
 # Dependency directories (remove the comment below to include it)
 # vendor/
 dist/
+
+# Output binaries and local configuration files
 hacompanion
+hacompanion*.toml
+registration.json

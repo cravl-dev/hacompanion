@@ -51,7 +51,7 @@ func (c Config) GetPushUrl() (string, error) {
 		return c.Notifications.PushURL, nil
 	}
 	// Get listen port
-	port := ":8080"
+	port := ":8234"
 	if c.Notifications.Listen != "" {
 		port = c.Notifications.Listen
 	}
